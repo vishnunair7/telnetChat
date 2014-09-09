@@ -47,6 +47,10 @@ public class ChatHandler implements Runnable {
 	dataToBeProcessed = dataToBeProcessed.replace("\n", "").replace("\r", "");
 	User user = userMap.get(socket);
 
+	if (dataToBeProcessed.isEmpty()) {
+	    return;
+	}
+	
 	// taking actions according to current user statuses
 	switch (user.getUserStatus()) {
 	    case CONNECTED:
