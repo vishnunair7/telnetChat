@@ -106,7 +106,8 @@ public class ChatHandler implements Runnable {
 	byte[] dataCopy;
 	dataToBeProcessed = dataToBeProcessed.replaceFirst("/create", "").trim();
 	chatRoomsMap.put(dataToBeProcessed, new TreeSet<User>());
-	String message = "New room " + dataToBeProcessed + " created\n/join " + dataToBeProcessed + " to join room\n";
+	String message = "New room " + dataToBeProcessed + " created\nEnter /join " + dataToBeProcessed + " to join room\n";
+	message += ("************\n");
 	dataCopy = message.getBytes();
 	return dataCopy;
     }
@@ -117,6 +118,7 @@ public class ChatHandler implements Runnable {
 	for (ChatOptions chatOptions : ChatOptions.values()) {
 	    message.append(chatOptions.getOptionCommand() + " - " + chatOptions.getDescription() + "\n");
 	}
+	message.append("************\n");
 	dataCopy = message.toString().getBytes();
 	return dataCopy;
     }
