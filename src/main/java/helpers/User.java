@@ -3,7 +3,7 @@ package main.java.helpers;
 public class User implements Comparable {
     private String userName;
     private UserStatus userStatus;
-    private String currentGroupName;
+    private String currentRoomName;
 
     public User(String userName, UserStatus userStatus) {
 	super();
@@ -30,8 +30,8 @@ public class User implements Comparable {
         return userStatus;
     }
 
-    public String getCurrentGroupName() {
-        return currentGroupName;
+    public String getCurrentRoomName() {
+        return currentRoomName;
     }
 
     public void setUserName(String userName) {
@@ -42,7 +42,7 @@ public class User implements Comparable {
         this.userStatus = userStatus;
     }
 
-    public void setCurrentGroupName(String currentGroupName) {
-        this.currentGroupName = currentGroupName;
+    public void setCurrentRoomName(String currentGroupName) {
+        this.currentRoomName = currentGroupName;
     }
 }
